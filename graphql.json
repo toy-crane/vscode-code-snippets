@@ -1,0 +1,29 @@
+{
+	"mutation creator": {
+		"prefix": "mg",
+		"body": [
+			"type Mutation {",
+			"  ${TM_FILENAME_BASE}(${1}): ${2}",
+			"}"
+		],
+		"description": "mutation creator"
+	},
+	"query creator": {
+		"prefix": "qg",
+		"body": [
+			"type Query {",
+			"  ${TM_FILENAME_BASE}(${1}): ${2}",
+			"}"
+		],
+		"description": "query creator"
+	},
+	"subscription creator": {
+		"prefix": "sg",
+		"body": [
+			"type Subscription {",
+			"  ${TM_FILENAME_BASE}(${1}): ${2}",
+			"}"
+		],
+		"description": "subscription creator"
+	}
+}
