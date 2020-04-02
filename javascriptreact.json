@@ -1,0 +1,50 @@
+{
+	"mutation resolver creator": {
+		"prefix": "mr",
+		"body": [
+			"import { prisma } from \"../../../../generated/prisma-client\"",
+			"",
+			"export default {",
+			"    Mutation: {",
+			"        ${TM_FILENAME_BASE}: async (_, args, { request }) => {",
+			"          ${1}",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "mutation resolver creator"
+	},
+	"query resolver creator": {
+		"prefix": "qr",
+		"body": [
+			"import { prisma } from \"../../../../generated/prisma-client\"",
+			"",
+			"export default {",
+			"    Query: {",
+			"        ${TM_FILENAME_BASE}: async (_, args, { request }) => {",
+			"          ${1}",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "query resolver creator"
+	},
+	"subscription resolver creator": {
+		"prefix": "sr",
+		"body": [
+			"import { prisma } from \"../../../../generated/prisma-client\"",
+			"",
+			"export default {",
+			"    Subscription: {",
+			"        ${TM_FILENAME_BASE}: {",
+			"            subscribe: async (_, args) => {",
+			"            },",
+			"            resolve: payload => {",
+			"            }",
+			"        }",
+			"    }",
+			"}"
+		],
+		"description": "subscription resolver creator"
+	}
+}
