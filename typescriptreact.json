@@ -2,33 +2,39 @@
 	"mutation resolver creator": {
 		"prefix": "mr",
 		"body": [
-			"import { prisma } from \"../../../../generated/prisma-client\"",
-			"",
-			"export default {",
-			"  Mutation: {",
-			"    ${TM_FILENAME_BASE}: async (_, args, {${1}}, ctx, info) => {",
-			"      ${2}",
-			"    }",
-			"  }",
-			"}"
+		  "import { prisma } from \"../../../../generated/prisma-client\";",
+		  "import { IResolvers } from \"graphql-tools\";",
+		  "",
+		  "const mutation: IResolvers = {",
+		  "  Mutation: {",
+		  "   ${TM_FILENAME_BASE}: async (_, {${1}}, ctx) => {",
+		  "        ${2}    ",
+		  "    }",
+		  "  }",
+		  "};",
+		  "export default mutation;",
+		  ""
 		],
 		"description": "mutation resolver creator"
-	},
-	"query resolver creator": {
+	  },
+	  "query resolver creator": {
 		"prefix": "qr",
 		"body": [
-			"import { prisma } from \"../../../../generated/prisma-client\"",
-			"",
-			"export default {",
-			"  Query: {",
-			"      ${TM_FILENAME_BASE}: async (_, args, { ${1}}, ctx, info) => {",
-			"        ${2}",
-			"      }",
-			"  }",
-			"}"
+		  "import { prisma } from \"../../../../generated/prisma-client\";",
+		  "import { IResolvers } from \"graphql-tools\";",
+		  "",
+		  "const query: IResolvers = {",
+		  "  Query: {",
+		  "   ${TM_FILENAME_BASE}: async (_, {${1}}, ctx) => {",
+		  "        ${2}    ",
+		  "    }",
+		  "  }",
+		  "};",
+		  "export default query;",
+		  ""
 		],
-		"description": "query resolver creator"
-	},
+		"description": "mutation resolver creator"
+	  },
 	"subscription resolver creator": {
 		"prefix": "sr",
 		"body": [
